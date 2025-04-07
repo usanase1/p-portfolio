@@ -6,29 +6,57 @@
   <title>My Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 font-sans">
+<body>
   <nav class="flex justify-between items-center p-6 bg-white shadow">
     <h1 class="text-lg font-bold text-blue-600">My Portfolio</h1>
     <ul class="flex space-x-6 text-gray-700 font-medium">
-      <li><a href="#" class="hover:text-blue-600">About</a></li>
-      <li><a href="#" class="hover:text-blue-600">Skills</a></li>
-      <li><a href="#" class="hover:text-blue-600">Contact</a></li>
+      <li><a href="#about" class="hover:text-blue-600">About Me</a></li>
+  <li><a href="#skills" class="hover:text-blue-600">Skills</a></li>
+  <li><a href="#education" class="hover:text-blue-600">Education</a></li>
+  <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
     </ul>
   </nav>
-
-  <section class="flex flex-col md:flex-row items-center justify-between px-10 py-20 bg-white shadow-md max-w-6xl mx-auto mt-10 rounded-lg">
-    <div class="mb-10 md:mb-0 md:w-1/2">
-      <h2 class="text-4xl font-bold mb-4">Hello, I'm Emeline USANASE</h2>
-      <p class="text-gray-600 mb-6">A Web Developer based in Rwanda</p>
-      <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">View My Work</a>
-    </div>
-    
-    <div class="md:w-1/2">
-      <h3 class="text-2xl font-semibold mb-2">Welcome to My Portfolio</h3>
-      <p class="text-gray-700">
-        I create beautiful and functional websites that help businesses grow and succeed in the digital world.
+  <section id="about" class="py-16 px-6 bg-gray-100">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">About Me</h2>
+      <p class="text-lg leading-relaxed">
+        Hell0! I'm <strong>Emeline USANASE</strong>, a passionate Computer Science student at the University of Rwanda. I'm interested in web development, UI/UX design, and using technology to solve real-world problems. My goal is to become a skilled full-stack developer and inspire other young women to explore tech.
       </p>
     </div>
   </section>
+  <section id="skills" class="py-16 px-6" >
+<div class="max-w-4xl mx-auto">
+<h2 class="text-3xl font-bold text-center mb-8">Skills</h2>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
+<span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">HTML</span>
+<span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">Tailwind</span>
+<span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">JavaScript</span>
+<span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">C++</span>
+<span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">Figma</span>
+</div>
+</div>
+  </section>
+
+  <section id="education" class="py-16 px-6 bg-gray-100">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-8">Education</h2>
+      <div class="text-center">
+        <p class="text-lg font-medium">University of Rwanda</p>
+        <p class="text-gray-600">Bachelor’s in Computer Science (Expected 2025)</p>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="py-16 px-6 bg-gray-100">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
+      <form class="space-y-4">
+        <input type="text" placeholder="Your Name" class="w-full p-3 border rounded" />
+        <input type="email" placeholder="Your Email" class="w-full p-3 border rounded" />
+        <textarea rows="5" placeholder="Your Message" class="w-full p-3 border rounded"></textarea>
+        <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Send Message</button>
+      </form>
+    </div>
+  </section>
+  
 </body>
 </html>
