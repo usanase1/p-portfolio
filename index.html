@@ -1,62 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <title>My Portfolio Card</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <nav class="flex justify-between items-center p-6 bg-white shadow">
-    <h1 class="text-lg font-bold text-blue-600">My Portfolio</h1>
-    <ul class="flex space-x-6 text-gray-700 font-medium">
-      <li><a href="#about" class="hover:text-blue-600">About Me</a></li>
-  <li><a href="#skills" class="hover:text-blue-600">Skills</a></li>
-  <li><a href="#education" class="hover:text-blue-600">Education</a></li>
-  <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
-    </ul>
-  </nav>
-  <section id="about" class="py-16 px-6 bg-gray-100">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-4">About Me</h2>
-      <p class="text-lg leading-relaxed">
-        Hell0! I'm <strong>Emeline USANASE</strong>, a passionate Computer Science student at the University of Rwanda. I'm interested in web development, UI/UX design, and using technology to solve real-world problems. My goal is to become a skilled full-stack developer and inspire other young women to explore tech.
-      </p>
-    </div>
-  </section>
-  <section id="skills" class="py-16 px-6" >
-<div class="max-w-4xl mx-auto">
-<h2 class="text-3xl font-bold text-center mb-8">Skills</h2>
-<div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
-<span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">HTML</span>
-<span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">Tailwind</span>
-<span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">JavaScript</span>
-<span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">C++</span>
-<span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">Figma</span>
-</div>
-</div>
-  </section>
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 min-h-screen flex items-center justify-center p-6">
 
-  <section id="education" class="py-16 px-6 bg-gray-100">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl font-bold text-center mb-8">Education</h2>
-      <div class="text-center">
-        <p class="text-lg font-medium">University of Rwanda</p>
-        <p class="text-gray-600">Bachelor’s in Computer Science (Expected 2025)</p>
-      </div>
+<main class="w-full max-w-sm bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden transition-all duration-500">
+  <section class="p-6">
+    <article class="text-center">
+      <figure class="flex justify-center mb-4">
+        <img src="usanase.jpg" alt="Profile picture" class="rounded-full w-24 h-24 border-4 border-indigo-500 dark:border-pink-500 animate-pulse">
+        <figcaption class="sr-only">Emeline Usanase Profile Picture</figcaption>
+      </figure>
+      
+      <h1 class="text-2xl font-bold">Emeline Usanase</h1>
+      <p class="text-sm text-gray-500 dark:text-gray-300">Computer Science Student</p>
+
+      <address class="mt-2 not-italic text-sm text-gray-600 dark:text-gray-400">
+        Kigali, Rwanda
+      </address>
+
+      <time datetime="2025-04-13" class="block mt-1 text-xs text-gray-400">Last updated: April 13, 2025</time>
+    </article>
+
+    <div class="mt-4 text-center">
+      <p id="quote" class="text-sm italic text-indigo-600 dark:text-pink-400 mb-3"></p>
+
+      <button id="toggleBtn" class="bg-indigo-600 dark:bg-pink-500 hover:bg-indigo-700 dark:hover:bg-pink-600 text-white px-4 py-2 rounded-lg shadow transition duration-300">
+        More About Me
+      </button>
+    </div>
+
+    <div id="moreInfo" class="mt-4 hidden transition-all duration-300">
+      <ul class="list-disc list-inside text-sm mt-2 text-gray-700 dark:text-gray-200">
+        <li>Hobbies: Coding, Design, Reading</li>
+        <li>Skills: HTML, CSS, JavaScript, Tailwind</li>
+        <li>Goals: Become a Frontend Developer</li>
+      </ul>
     </div>
   </section>
-  <section id="contact" class="py-16 px-6 bg-gray-100">
-    <div class="max-w-2xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
-      <form class="space-y-4">
-        <input type="text" placeholder="Your Name" class="w-full p-3 border rounded" />
-        <input type="email" placeholder="Your Email" class="w-full p-3 border rounded" />
-        <textarea rows="5" placeholder="Your Message" class="w-full p-3 border rounded"></textarea>
-        <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Send Message</button>
-      </form>
-    </div>
-  </section>
-  
+</main>
+
+<script>
+  const toggleBtn = document.getElementById('toggleBtn');
+  const moreInfo = document.getElementById('moreInfo');
+
+  toggleBtn.addEventListener('click', () => {
+    moreInfo.classList.toggle('hidden');
+    moreInfo.classList.toggle('block');
+  });
+
+  const quotes = [
+    "Believe in yourself and all that you are.",
+    "Your only limit is your mind.",
+    "Great things never come from comfort zones.",
+    "Push yourself, because no one else is going to do it for you.",
+    "Do something today that your future self will thank you for."
+  ];
+
+  const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+  document.getElementById('quote').innerText = `"${randomQuote}"`;
+</script>
+
 </body>
 </html>
